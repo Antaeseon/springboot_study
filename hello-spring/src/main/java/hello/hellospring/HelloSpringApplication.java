@@ -1,3 +1,4 @@
+// componet scan은 기본적으로 hello.hellospring 아래에 있는 것만 가능하다.
 package hello.hellospring;
 
 import org.springframework.boot.SpringApplication;
