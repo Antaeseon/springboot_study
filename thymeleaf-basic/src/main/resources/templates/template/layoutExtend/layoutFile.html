@@ -1,0 +1,15 @@
+<!--페이지가 많아지고 관리하는 것이 힘들어지면 레이아웃을 사용하는 것이 더 좋다. 이러한 경우가 아니면 프래그먼트가 더 편할 수 있다.-->
+<!DOCTYPE html>
+<html th:fragment="layout (title, content)" xmlns:th="http://
+  www.thymeleaf.org">
+<head>
+    <title th:replace="${title}">레이아웃 타이틀</title></head>
+<body>
+<h1>레이아웃 H1</h1>
+<div th:replace="${content}"><p>레이아웃 컨텐츠</p>
+</div>
+
+<footer> 레이아웃 푸터
+</footer>
+</body>
+</html>
