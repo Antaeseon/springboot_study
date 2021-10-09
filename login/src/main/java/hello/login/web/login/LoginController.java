@@ -72,7 +72,7 @@ public class LoginController {
         return "redirect:/";
     }
 
-//    @PostMapping("/login")
+    //    @PostMapping("/login")
     public String loginV3(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletRequest request) {
         if (bindingResult.hasErrors()) {
             return "login/loginForm";
@@ -88,12 +88,12 @@ public class LoginController {
         //세션이 있으면 있는 세션 반환, 없으면 신규 세션을 생성
         HttpSession session = request.getSession();
         //세션에 로그인 회원 정보 보관
-        session.setAttribute(SessionConst.LOGIN_MEBMER,loginMember);
+        session.setAttribute(SessionConst.LOGIN_MEBMER, loginMember);
 
         return "redirect:/";
     }
 
-        @PostMapping("/login")
+    @PostMapping("/login")
     public String loginV4(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult,
                           @RequestParam(defaultValue = "/") String redirectURL,
                           HttpServletRequest request) {
@@ -111,9 +111,9 @@ public class LoginController {
         //세션이 있으면 있는 세션 반환, 없으면 신규 세션을 생성
         HttpSession session = request.getSession();
         //세션에 로그인 회원 정보 보관
-        session.setAttribute(SessionConst.LOGIN_MEBMER,loginMember);
+        session.setAttribute(SessionConst.LOGIN_MEBMER, loginMember);
 
-        return "redirect:"+redirectURL;
+        return "redirect:" + redirectURL;
     }
 
 
@@ -124,20 +124,20 @@ public class LoginController {
         return "redirect:/";
     }
 
-//    @PostMapping("/logout")
+    //    @PostMapping("/logout")
     public String logoutV2(HttpServletRequest request) {
         sessionManager.expire(request);
         return "redirect:/";
     }
 
 
-        @PostMapping("/logout")
+    @PostMapping("/logout")
     public String logoutV3(HttpServletRequest request) {
-            HttpSession session = request.getSession(false);
-            if (session != null) {
-                session.invalidate();
-            }
-            return "redirect:";
+        HttpSession session = request.getSession(false);
+        if (session != null) {
+            session.invalidate();
+        }
+        return "redirect:";
     }
 
 
