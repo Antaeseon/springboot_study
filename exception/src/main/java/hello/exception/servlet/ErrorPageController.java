@@ -54,6 +54,7 @@ public class ErrorPageController {
 
         Integer statusCode = (Integer) request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
 
+        
         return new ResponseEntity<>(result, HttpStatus.valueOf(statusCode));
 
     }
