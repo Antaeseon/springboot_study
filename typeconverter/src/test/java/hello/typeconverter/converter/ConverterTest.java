@@ -1,7 +1,6 @@
-package helllo.typeconverter.converter;
+package hello.typeconverter.converter;
 
-import helllo.typeconverter.type.IpPort;
-import org.assertj.core.api.Assertions;
+import hello.typeconverter.type.IpPort;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;

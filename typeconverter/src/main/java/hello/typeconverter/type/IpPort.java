@@ -1,4 +1,4 @@
-package helllo.typeconverter.type;
+package hello.typeconverter.type;
 
 
 import lombok.EqualsAndHashCode;

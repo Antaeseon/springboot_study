@@ -1,6 +1,6 @@
-package helllo.typeconverter.converter;
+package hello.typeconverter.converter;
 
-import helllo.typeconverter.type.IpPort;
+import hello.typeconverter.type.IpPort;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.convert.converter.Converter;
 

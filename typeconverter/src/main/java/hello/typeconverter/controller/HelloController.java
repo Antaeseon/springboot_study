@@ -1,6 +1,6 @@
-package helllo.typeconverter.controller;
+package hello.typeconverter.controller;
 
-import helllo.typeconverter.type.IpPort;
+import hello.typeconverter.type.IpPort;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
