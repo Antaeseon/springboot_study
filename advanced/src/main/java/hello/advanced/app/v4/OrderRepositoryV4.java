@@ -16,10 +16,10 @@ public class OrderRepositoryV4 {
     private final LogTrace trace;
 
     public void save(String itemId) {
-
         AbstractTemplate<Void> template = new AbstractTemplate<>(trace) {
             @Override
             protected Void call() {
+                //저장 로직
                 if (itemId.equals("ex")) {
                     throw new IllegalStateException("예외 발생!");
                 }
