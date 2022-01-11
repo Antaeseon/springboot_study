@@ -21,9 +21,8 @@ public class HelloTraceV2 {
     }
 
     //V2에서 추가
-    public TraceStatus beginSync(TraceId beforTraceId, String message) {
-//        TraceId traceId = new TraceId();
-        TraceId nextId = beforTraceId.createNextId();
+    public TraceStatus beginSync(TraceId beforeTraceId, String message) {
+        TraceId nextId = beforeTraceId.createNextId();
         Long startTimeMs = System.currentTimeMillis();
         log.info("[{}] {}{}", nextId.getId(), addSpace(START_PREFIX,
                 nextId.getLevel()), message);
