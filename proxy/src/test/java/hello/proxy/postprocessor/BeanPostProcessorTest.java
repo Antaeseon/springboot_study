@@ -56,6 +56,9 @@ public class BeanPostProcessorTest {
         }
     }
 
+    /*
+     BeanPostProcessor를 구현하면 Bean 바꿔치기 가능
+     */
     @Slf4j
     static class AToBPostProcessor implements BeanPostProcessor {
         @Override
