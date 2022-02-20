@@ -14,12 +14,23 @@ public class LogTraceAspect {
 
 
     @Around("execution(* hello.proxy.app..*(..))")
-    public Object execute(ProceedingJoinPoint joinPoint) throws Throwable{
+    public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
 
         TraceStatus status = null;
 
+        try {
+            String message = joinPoint.getSignature().toShortString();
+            status = logTrace.begin(message);
 
-        return status;
+            //로직호출
+            Object result = joinPoint.proceed();
+
+            logTrace.end(status);
+            return result;
+        } catch (Exception e) {
+            logTrace.exception(status, e);
+            throw e;
+        }
     }
 
 }
