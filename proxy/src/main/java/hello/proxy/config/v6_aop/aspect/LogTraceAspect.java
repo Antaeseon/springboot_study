@@ -17,6 +17,9 @@ public class LogTraceAspect {
     }
 
 
+    /*
+    Advisor = Advice + PointCut
+     */
     @Around("execution(* hello.proxy.app..*(..))")
     public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
 
