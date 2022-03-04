@@ -18,7 +18,8 @@ import org.springframework.context.annotation.Import;
  */
 @Slf4j
 @Import(ThisTargetTest.ThisTargetAspect.class)
-@SpringBootTest(properties = "spring.aop.proxy-target-class=false")
+//@SpringBootTest(properties = "spring.aop.proxy-target-class=false")
+@SpringBootTest(properties = "spring.aop.proxy-target-class=true")
 public class ThisTargetTest {
 
     @Autowired
