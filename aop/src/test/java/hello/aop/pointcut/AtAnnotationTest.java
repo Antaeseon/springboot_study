@@ -10,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 
-import java.util.Objects;
-
 @Slf4j
 @Import(AtAnnotationTest.AtAnnotationAspect.class)
 @SpringBootTest
@@ -32,10 +30,8 @@ public class AtAnnotationTest {
     static class AtAnnotationAspect {
         @Around("@annotation(hello.aop.member.annotation.MethodAop)")
         public Object doAtAnnotation(ProceedingJoinPoint joinPoint) throws Throwable {
-            log.info("[@annotation] {}",joinPoint.getSignature());
+            log.info("[@annotation] {}", joinPoint.getSignature());
             return joinPoint.proceed();
         }
     }
-
-
 }
