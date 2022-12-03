@@ -12,6 +12,7 @@ import static hello.jdbc.connection.ConnectionConst.*;
 public class DBConnectionUtil {
 	public static Connection getConnection() {
 		try{
+			//라이브러리에 등록된 드라이버 목록을 자동으로 인식
 			Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 			log.info("get connection={}, class={}", connection, connection.getClass());
 			return connection;
