@@ -1,7 +1,9 @@
 package hello.jdbc.connection;
 
+
+//abstract로 객체 생성 막는다.
 public abstract class ConnectionConst {
 	public static final String URL = "jdbc:h2:tcp://localhost/~/test";
 	public static final String USERNAME = "sa";
-	public static final String PASSWORD = "1234";
+	public static final String PASSWORD = "";
 }
